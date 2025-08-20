@@ -1,37 +1,72 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Lida</title>
+  <title>Lida's Portfolio</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 20px;
-      background-color: #f9f9f9;
-      line-height: 1.6;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 0;
+      text-align: center;
     }
-    h1, h2, h3 {
-      color: #333;
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 30px 0;
+    }
+    h1 {
+      margin: 0;
+      animation: fadeIn 2s;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .content {
+      padding: 20px;
     }
     .project {
-      background: #fff;
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 500px;
+      transition: transform 0.3s;
     }
-    a {
-      color: #007acc;
-      text-decoration: none;
+    .project:hover {
+      transform: scale(1.05);
     }
-    a:hover {
-      text-decoration: underline;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 400px;
+      margin: 0 auto;
     }
+    input, textarea, button {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    
   </style>
 </head>
 <body>
-  <h1>Ciao, sono Lida 👋</h1>
+  <h1>Ciao, sono Lida </h1>
   <p>Benvenuti nel mio portfolio. Sto imparando lo sviluppo web e l’intelligenza artificiale, e questo è un esempio del mio lavoro ospitato su GitHub Pages.</p>
 
   <div class="project">
@@ -57,7 +92,7 @@
 
     <h3>5. Hai un profilo GitHub, GitLab o portfolio online?</h3>
     <p>Sì, questo è il mio GitHub con il portfolio e una pagina web di esempio: 
-       <a href="https://USERNAME.github.io/portfolio/">Link al portfolio</a>
+       <a href="https://lidalidio.github.io/portfolio/">Link al portfolio</a>
     </p>
 
     <h3>6. Cosa ti interessa di più del mondo Intelligenza Artificiale e startup?</h3>
