@@ -1,100 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lida's Portfolio</title>
+  <title>Portfolio - Lida</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f0f4f8;
-      margin: 0;
-      padding: 0;
-      text-align: center;
+      margin: 20px;
+      background-color: #f9f9f9;
+      line-height: 1.6;
     }
-    header {
-      background: #4CAF50;
-      color: white;
-      padding: 30px 0;
-    }
-    h1 {
-      margin: 0;
-      animation: fadeIn 2s;
-    }
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-    .content {
-      padding: 20px;
+    h1, h2, h3 {
+      color: #333;
     }
     .project {
-      background: white;
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      max-width: 500px;
-      transition: transform 0.3s;
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .project:hover {
-      transform: scale(1.05);
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      max-width: 400px;
-      margin: 0 auto;
-    }
-    input, textarea, button {
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-    button {
-      background: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #45a049;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Hi, I'm Lida</h1>
-    <p>Junior Developer | AI & Web Enthusiast</p>
-  </header>
-
-  <div class="content">
-    <div class="project">
-      <h2>Mini AI Project</h2>
-      <p>Example: A small web experiment using JS animations and form handling.</p>
-    </div>
-
-    <div class="project">
-      <h2>Contact Me</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" rows="4" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
-  </div>
-
-  <script>
-    const headerText = document.querySelector('header h1');
-    let colors = ['#ff4d4d', '#4da6ff', '#4dff88', '#ffa64d'];
-    let i = 0;
-    setInterval(() => {
-      headerText.style.color = colors[i % colors.length];
-      i++;
-    }, 1000);
-  </script>
-</body>
-</html>
+    a {
+      color: #007acc;
