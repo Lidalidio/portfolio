@@ -13,7 +13,7 @@
       text-align: center;
     }
     header {
-      background: #4CAF50;
+      background: #f46972;
       color: white;
       padding: 30px 0;
     }
@@ -54,20 +54,23 @@
       font-size: 1rem;
     }
     button {
-      background: #4CAF50;
+      background: #e94b58;
       color: white;
       border: none;
       cursor: pointer;
     }
     button:hover {
-      background: #45a049;
+      background: #ef454d;
     }
     
   </style>
 </head>
 <body>
+<header>
   <h1>Ciao, sono Lida </h1>
-  <p>Benvenuti nel mio portfolio. Sto imparando lo sviluppo web e l’intelligenza artificiale, e questo è un esempio del mio lavoro ospitato su GitHub Pages.</p>
+  <p>Benvenuti nel mio portfolio. Ho una laurea in Computer Software Engineering conseguita nel mio Paese. In seguito mi sono trasferita in Italia, dove ho frequentato per due anni il corso magistrale in ICT and Internet Engineering presso l’Università di Tor Vergata.</p>
+  </header>
+
 
   <div class="project">
     <h2>Progetto: Mini Portfolio</h2>
@@ -79,7 +82,7 @@
     <h2>Domande di preselezione</h2>
 
     <h3>1. Hai già sviluppato qualcosa utilizzando HTML, CSS e JavaScript?</h3>
-    <p>Sì, sto imparando a utilizzare HTML, CSS e JavaScript. Ho realizzato una semplice pagina web personale come portfolio, con un piccolo progetto di animazione e un form di contatto. È online su GitHub Pages.</p>
+    <p>Ho lavorato per circa 8 anni in un’azienda di ingegneria web chiamata DayTelecom nel mio Paese. Ho realizzato e gestito molti siti con WordPress e anche con un software proprietario sviluppato dall’azienda. Inoltre, mi sono occupata del supporto online e dell’assistenza post-servizio.</p>
 
     <h3>2. Hai mai usato Python o Node.js?</h3>
     <p>Sto iniziando a studiare Python attraverso esercizi base. Per esempio, ho scritto piccoli script per manipolare testi e numeri. Non ho ancora un progetto grande, ma ho tanta voglia di crescere con queste tecnologie.</p>
@@ -110,5 +113,25 @@
     <h3>10. Saresti interessato a continuare dopo lo stage con apprendistato e stock option?</h3>
     <p>Sì, mi piacerebbe molto continuare e crescere insieme all’azienda, anche con la possibilità di stock option.</p>
   </div>
+
+<div class="project">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+<script>
+    const headerText = document.querySelector('header h1');
+    let colors = ['#ff4d4d', '#4da6ff', '#4dff88', '#ffa64d'];
+    let i = 0;
+    setInterval(() => {
+      headerText.style.color = colors[i % colors.length];
+      i++;
+    }, 1000);
+  </script>
+
 </body>
 </html>
