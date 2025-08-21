@@ -6,40 +6,80 @@
   <title>Lida's Portfolio</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f0f4f8;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f7f9fc;
       margin: 0;
       padding: 0;
+      color: #333;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #f46972, #e94b58);
+      color: white;
+      padding: 40px 20px;
       text-align: center;
     }
-    header {
-      background: #f46972;
-      color: white;
-      padding: 30px 0;
-    }
-    h1 {
+    header h1 {
       margin: 0;
+      font-size: 2.2rem;
       animation: fadeIn 2s;
+    }
+    header p {
+      max-width: 800px;
+      margin: 15px auto 0;
+      line-height: 1.6;
+      font-size: 1rem;
     }
     @keyframes fadeIn {
       from {opacity: 0;}
       to {opacity: 1;}
     }
-    .content {
-      padding: 20px;
-    }
+
+    /* SECTIONS */
     .project {
       background: white;
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      max-width: 500px;
+      margin: 30px auto;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      max-width: 1100px;
       transition: transform 0.3s;
     }
     .project:hover {
-      transform: scale(1.05);
+      transform: translateY(-4px);
     }
+    h2 {
+      color: #e94b58;
+      margin-bottom: 15px;
+    }
+
+    /* GRID Q&A */
+    .qa-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      text-align: left;
+    }
+    .qa-item {
+      background: #fdfdfd;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid #f46972;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .qa-item h3 {
+      margin-top: 0;
+      color: #444;
+      font-size: 1.05rem;
+    }
+    .qa-item p {
+      margin: 8px 0 0;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    /* CONTACT FORM */
     form {
       display: flex;
       flex-direction: column;
@@ -48,9 +88,9 @@
       margin: 0 auto;
     }
     input, textarea, button {
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
       font-size: 1rem;
     }
     button {
@@ -58,80 +98,133 @@
       color: white;
       border: none;
       cursor: pointer;
+      transition: background 0.3s;
     }
     button:hover {
-      background: #ef454d;
+      background: #c63e49;
     }
-    
+
+    /* FOOTER */
+    footer {
+      background: linear-gradient(135deg, #f46972, #e94b58);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .footer-icons {
+      margin: 10px 0;
+    }
+    .footer-icons a {
+      margin: 0 10px;
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      font-size: 1.2rem;
+      transition: opacity 0.3s;
+    }
+    .footer-icons a:hover {
+      opacity: 0.8;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .qa-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <!-- برای آیکون‌ها نیاز داری kit کد شخصی از FontAwesome بگیری. موقتاً از CDN زیر میشه -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 <body>
+
 <header>
-  <h1>Ciao, sono Lida </h1>
+  <h1>Ciao, sono Lida</h1>
   <p>Benvenuti nel mio portfolio. Ho una laurea in Computer Software Engineering conseguita nel mio Paese. In seguito mi sono trasferita in Italia, dove ho frequentato per due anni il corso magistrale in ICT and Internet Engineering presso l’Università di Tor Vergata.</p>
-  </header>
-
-
-  <div class="project">
-    <h2>Progetto: Mini Portfolio</h2>
-    <p>Ho realizzato questa pagina con HTML, CSS e un po’ di JavaScript. 
-       Include un’animazione semplice e un form di contatto.</p>
-  </div>
-
-  <div class="project">
-    <h2>Domande di preselezione</h2>
-
-    <h3>1. Hai già sviluppato qualcosa utilizzando HTML, CSS e JavaScript?</h3>
-    <p>Ho lavorato per circa 8 anni in un’azienda di ingegneria web chiamata DayTelecom nel mio Paese. Ho realizzato e gestito molti siti con WordPress e anche con un software proprietario sviluppato dall’azienda. Inoltre, mi sono occupata del supporto online e dell’assistenza post-servizio.</p>
-
-    <h3>2. Hai mai usato Python o Node.js?</h3>
-    <p>Sto iniziando a studiare Python attraverso esercizi base. Per esempio, ho scritto piccoli script per manipolare testi e numeri. Non ho ancora un progetto grande, ma ho tanta voglia di crescere con queste tecnologie.</p>
-
-    <h3>3. Hai mai lavorato con React o Next.js?</h3>
-    <p>Non ancora, ma sono molto interessata a imparare React perché credo sia fondamentale per lo sviluppo moderno di applicazioni web. Mi piacerebbe avere l’opportunità di usarlo nei vostri progetti.</p>
-
-    <h3>4. Conosci o hai mai utilizzato un database (es. PostgreSQL, MySQL, Supabase)?</h3>
-    <p>Ho una conoscenza teorica di base dei database relazionali (come MySQL), ma non li ho ancora utilizzati in un progetto reale. Vorrei approfondire presto questo aspetto pratico.</p>
-
-    <h3>5. Hai un profilo GitHub, GitLab o portfolio online?</h3>
-    <p>Sì, questo è il mio GitHub con il portfolio e una pagina web di esempio: 
-       <a href="https://lidalidio.github.io/portfolio/">Link al portfolio</a>
-    </p>
-
-    <h3>6. Cosa ti interessa di più del mondo Intelligenza Artificiale e startup?</h3>
-    <p>Mi affascina l’idea che l’Intelligenza Artificiale possa semplificare processi complessi e rendere più accessibili soluzioni innovative. Mi piace anche l’ambiente startup perché è dinamico, creativo e offre la possibilità di crescere velocemente imparando sul campo.</p>
-
-    <h3>7. Sei disposto a lavorare in un contesto dinamico?</h3>
-    <p>Assolutamente sì. Sono motivata a imparare facendo esperienza diretta e credo che un ambiente dinamico sia perfetto per la mia crescita.</p>
-
-    <h3>8. Come ti vedi tra 2 anni?</h3>
-    <p>Mi piacerebbe crescere in una startup innovativa come KubikGO, perché voglio partecipare attivamente alla creazione di prodotti concreti e contribuire al loro successo.</p>
-
-    <h3>9. Sei disponibile a lavorare in modalità ibrida?</h3>
-    <p>Sì, sono disponibile sia a lavorare in presenza a Pescara sia in smart working parziale.</p>
-
-    <h3>10. Saresti interessato a continuare dopo lo stage con apprendistato e stock option?</h3>
-    <p>Sì, mi piacerebbe molto continuare e crescere insieme all’azienda, anche con la possibilità di stock option.</p>
-  </div>
+</header>
 
 <div class="project">
-      <h2>Contact Me</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" rows="4" required></textarea>
-        <button type="submit">Send</button>
-      </form>
+  <h2>Progetto: Mini Portfolio</h2>
+  <p>Ho realizzato questa pagina con HTML, CSS e un po’ di JavaScript. 
+     Include un’animazione semplice e un form di contatto.</p>
+</div>
+
+<div class="project">
+  <h2>Domande di preselezione</h2>
+  <div class="qa-grid">
+    <div class="qa-item">
+      <h3>1. Hai già sviluppato qualcosa utilizzando HTML, CSS e JavaScript?</h3>
+      <p>Ho lavorato per circa 8 anni in un’azienda di ingegneria web chiamata DayTelecom nel mio Paese...</p>
     </div>
+    <div class="qa-item">
+      <h3>2. Hai mai usato Python o Node.js?</h3>
+      <p>Sto iniziando a studiare Python attraverso esercizi base...</p>
+    </div>
+    <div class="qa-item">
+      <h3>3. Hai mai lavorato con React o Next.js?</h3>
+      <p>Non ancora, ma sono molto interessata a imparare React...</p>
+    </div>
+    <div class="qa-item">
+      <h3>4. Conosci o hai mai utilizzato un database?</h3>
+      <p>Ho una conoscenza teorica di base dei database relazionali...</p>
+    </div>
+    <div class="qa-item">
+      <h3>5. Hai un profilo GitHub?</h3>
+      <p>Sì, questo è il mio GitHub: <a href="https://lidalidio.github.io/portfolio/" target="_blank">Portfolio</a></p>
+    </div>
+    <div class="qa-item">
+      <h3>6. Cosa ti interessa di più dell’IA?</h3>
+      <p>Mi affascina l’idea che l’Intelligenza Artificiale possa semplificare processi complessi...</p>
+    </div>
+    <div class="qa-item">
+      <h3>7. Sei disposto a lavorare in un contesto dinamico?</h3>
+      <p>Assolutamente sì, sono motivata a imparare...</p>
+    </div>
+    <div class="qa-item">
+      <h3>8. Come ti vedi tra 2 anni?</h3>
+      <p>Mi piacerebbe crescere in una startup innovativa come KubikGO...</p>
+    </div>
+    <div class="qa-item">
+      <h3>9. Sei disponibile a lavorare in modalità ibrida?</h3>
+      <p>Sì, disponibile sia in presenza a Pescara che in smart working.</p>
+    </div>
+    <div class="qa-item">
+      <h3>10. Interessata a continuare dopo lo stage?</h3>
+      <p>Sì, mi piacerebbe molto continuare e crescere insieme all’azienda.</p>
+    </div>
+  </div>
+</div>
+
+<div class="project">
+  <h2>Contact Me</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" rows="4" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<footer>
+  <p>© 2025 Lida Ahmadi</p>
+  <div class="footer-icons">
+    <a href="mailto:lidaahmadi09@gmail.com"><i class="fas fa-envelope"></i></a>
+    <a href="https://wa.me/393516336922"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  <p>Email: lidaahmadi09@gmail.com | WhatsApp: +39 351 633 6922</p>
+</footer>
+
 <script>
-    const headerText = document.querySelector('header h1');
-    let colors = ['#ff4d4d', '#4da6ff', '#4dff88', '#ffa64d'];
-    let i = 0;
-    setInterval(() => {
-      headerText.style.color = colors[i % colors.length];
-      i++;
-    }, 1000);
-  </script>
+  const headerText = document.querySelector('header h1');
+  let colors = ['#ffcccc', '#ffe0e0', '#ffffff'];
+  let i = 0;
+  setInterval(() => {
+    headerText.style.color = colors[i % colors.length];
+    i++;
+  }, 1500);
+</script>
 
 </body>
 </html>
