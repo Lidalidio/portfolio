@@ -96,13 +96,19 @@
     }
 
 .chi-sono {
-  animation: fadeIn 1s ease-in-out;
+  animation: floatText 3s ease-in-out infinite;
   color: #333;
   font-size: 18px;
   line-height: 1.6;
-  margin: 30px 0;
+  margin: 30px auto; /* متن وسط‌تر می‌شود */
+  max-width: 800px; /* عرض محدود برای مرکز کردن */
+  text-align: center;
 }
 
+@keyframes floatText {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
     /* === Contact Form === */
     form {
       display: flex;
@@ -181,10 +187,9 @@
     <p>AI Enthusiast & Web Developer</p>
   </header>
 
-<div class="project">
-  <h2>Chi Sono</h2>
-  <p>Benvenuti nel mio portfolio. Ho una laurea in Computer Software Engineering conseguita nel mio Paese. In seguito mi sono trasferita in Italia, dove ho frequentato per due anni il corso magistrale in ICT and Internet Engineering presso l’Università di Tor Vergata.</p>
-</div>
+<p class="chi-sono">
+  Benvenuti nel mio portfolio. Ho una laurea in Computer Software Engineering conseguita nel mio Paese. In seguito mi sono trasferita in Italia, dove ho frequentato per due anni il corso magistrale in ICT and Internet Engineering presso l’Università di Tor Vergata.
+</p>
 
   <main>
     <section>
