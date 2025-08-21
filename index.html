@@ -3,228 +3,216 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lida's Portfolio</title>
+  <title>Lida Ahmadi - AI Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    /* === Global Styles === */
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f7f9fc;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background: #f4f4f9;
       color: #333;
+      line-height: 1.6;
     }
 
-    /* HEADER */
+    h1, h2, h3 {
+      margin-bottom: 10px;
+    }
+
     header {
-      background: linear-gradient(135deg, #f46972, #e94b58);
+      background: linear-gradient(135deg, #4a90e2, #e94b58);
       color: white;
       padding: 40px 20px;
       text-align: center;
     }
+
     header h1 {
       margin: 0;
-      font-size: 2.2rem;
-      animation: fadeIn 2s;
+      font-size: 2.5rem;
     }
+
     header p {
-      max-width: 800px;
-      margin: 15px auto 0;
-      line-height: 1.6;
-      font-size: 1rem;
-    }
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
+      margin-top: 10px;
+      font-size: 1.2rem;
     }
 
-    /* SECTIONS */
-    .project {
-      background: white;
-      margin: 30px auto;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      max-width: 1100px;
-      transition: transform 0.3s;
+    main {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
     }
-    .project:hover {
-      transform: translateY(-4px);
+
+    section {
+      margin-bottom: 40px;
     }
+
     h2 {
-      color: #e94b58;
-      margin-bottom: 15px;
+      color: #4a90e2;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
     }
 
-    /* GRID Q&A */
-    .qa-grid {
+    /* === Q&A Section === */
+    .qa-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
-      text-align: left;
-    }
-    .qa-item {
-      background: #fdfdfd;
-      padding: 15px;
-      border-radius: 8px;
-      border-left: 4px solid #f46972;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-    .qa-item h3 {
-      margin-top: 0;
-      color: #444;
-      font-size: 1.05rem;
-    }
-    .qa-item p {
-      margin: 8px 0 0;
-      line-height: 1.5;
-      font-size: 0.95rem;
     }
 
-    /* CONTACT FORM */
+    .qa-item {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .qa-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .qa-item h3 {
+      margin-top: 0;
+      color: #e94b58; /* رنگ جذاب برای سوال‌ها */
+    }
+
+.chi-sono {
+  animation: fadeIn 1s ease-in-out;
+  color: #333;
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 30px 0;
+}
+
+    /* === Contact Form === */
     form {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      max-width: 400px;
-      margin: 0 auto;
-    }
-    input, textarea, button {
-      padding: 12px;
-      border-radius: 6px;
-      border: 1px solid #ddd;
-      font-size: 1rem;
-    }
-    button {
-      background: #e94b58;
-      color: white;
-      border: none;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background: #c63e49;
+      gap: 15px;
     }
 
-    /* FOOTER */
-    footer {
-      background: linear-gradient(135deg, #f46972, #e94b58);
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #4a90e2;
       color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #357abd;
+    }
+
+    /* === Footer === */
+    footer {
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
+      background: linear-gradient(135deg, #4a90e2, #e94b58);
+      color: white;
     }
+
+    footer p {
+      margin: 5px 0;
+    }
+
     .footer-icons {
       margin: 10px 0;
     }
+
     .footer-icons a {
-      margin: 0 10px;
-      display: inline-block;
-      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.5rem;
       color: white;
-      font-size: 1.2rem;
-      transition: opacity 0.3s;
-    }
-    .footer-icons a:hover {
-      opacity: 0.8;
+      transition: color 0.3s;
     }
 
-    /* RESPONSIVE */
+    .footer-icons a:hover {
+      color: #ffdd57;
+    }
+
+    /* === Responsive Design === */
     @media (max-width: 768px) {
-      .qa-grid {
+      .qa-container {
         grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
       }
     }
   </style>
-  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-  <!-- برای آیکون‌ها نیاز داری kit کد شخصی از FontAwesome بگیری. موقتاً از CDN زیر میشه -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 <body>
+  <header>
+    <h1>Lida Ahmadi</h1>
+    <p>AI Enthusiast & Web Developer</p>
+  </header>
 
-<header>
-  <h1>Ciao, sono Lida</h1>
-  <p>Benvenuti nel mio portfolio. Ho una laurea in Computer Software Engineering conseguita nel mio Paese. In seguito mi sono trasferita in Italia, dove ho frequentato per due anni il corso magistrale in ICT and Internet Engineering presso l’Università di Tor Vergata.</p>
-</header>
+<section class="chi-sono">
+  <h2>Chi Sono</h2>
+  <p>
+    Benvenuti nel mio portfolio. Ho una laurea in Computer Software Engineering conseguita nel mio Paese. 
+    In seguito mi sono trasferita in Italia, dove ho frequentato per due anni il corso magistrale in 
+    ICT and Internet Engineering presso l’Università di Tor Vergata.
+  </p>
+</section>
 
-<div class="project">
-  <h2>Progetto: Mini Portfolio</h2>
-  <p>Ho realizzato questa pagina con HTML, CSS e un po’ di JavaScript. 
-     Include un’animazione semplice e un form di contatto.</p>
-</div>
+  <main>
+    <section>
+      <h2>Domande di Preselezione & Risposte</h2>
+      <div class="qa-container">
+        <div class="qa-item">
+          <h3>1. Quali esperienze hai con l’Intelligenza Artificiale?</h3>
+          <p>Ho sviluppato piccoli progetti di Machine Learning e utilizzo strumenti di AI generativa per il supporto nella scrittura, traduzione e creazione di contenuti.</p>
+        </div>
+        <div class="qa-item">
+          <h3>2. Conosci strumenti di sviluppo web o framework?</h3>
+          <p>Sì, conosco HTML, CSS, JavaScript e WordPress. Sto approfondendo anche GitHub e strumenti di collaborazione online.</p>
+        </div>
+        <div class="qa-item">
+          <h3>3. Perché vuoi lavorare con noi?</h3>
+          <p>Perché credo nell’innovazione digitale e mi interessa applicare l’AI in progetti concreti che migliorano i processi aziendali.</p>
+        </div>
+        <div class="qa-item">
+          <h3>4. Quali soft skills porti nel team?</h3>
+          <p>Problem solving, curiosità, capacità di apprendimento veloce e lavoro di squadra.</p>
+        </div>
+      </div>
+    </section>
 
-<div class="project">
-  <h2>Domande di preselezione</h2>
-  <div class="qa-grid">
-    <div class="qa-item">
-      <h3>1. Hai già sviluppato qualcosa utilizzando HTML, CSS e JavaScript?</h3>
-      <p>Ho lavorato per circa 8 anni in un’azienda di ingegneria web chiamata DayTelecom nel mio Paese...</p>
-    </div>
-    <div class="qa-item">
-      <h3>2. Hai mai usato Python o Node.js?</h3>
-      <p>Sto iniziando a studiare Python attraverso esercizi base...</p>
-    </div>
-    <div class="qa-item">
-      <h3>3. Hai mai lavorato con React o Next.js?</h3>
-      <p>Non ancora, ma sono molto interessata a imparare React...</p>
-    </div>
-    <div class="qa-item">
-      <h3>4. Conosci o hai mai utilizzato un database?</h3>
-      <p>Ho una conoscenza teorica di base dei database relazionali...</p>
-    </div>
-    <div class="qa-item">
-      <h3>5. Hai un profilo GitHub?</h3>
-      <p>Sì, questo è il mio GitHub: <a href="https://lidalidio.github.io/portfolio/" target="_blank">Portfolio</a></p>
-    </div>
-    <div class="qa-item">
-      <h3>6. Cosa ti interessa di più dell’IA?</h3>
-      <p>Mi affascina l’idea che l’Intelligenza Artificiale possa semplificare processi complessi...</p>
-    </div>
-    <div class="qa-item">
-      <h3>7. Sei disposto a lavorare in un contesto dinamico?</h3>
-      <p>Assolutamente sì, sono motivata a imparare...</p>
-    </div>
-    <div class="qa-item">
-      <h3>8. Come ti vedi tra 2 anni?</h3>
-      <p>Mi piacerebbe crescere in una startup innovativa come KubikGO...</p>
-    </div>
-    <div class="qa-item">
-      <h3>9. Sei disponibile a lavorare in modalità ibrida?</h3>
-      <p>Sì, disponibile sia in presenza a Pescara che in smart working.</p>
-    </div>
-    <div class="qa-item">
-      <h3>10. Interessata a continuare dopo lo stage?</h3>
-      <p>Sì, mi piacerebbe molto continuare e crescere insieme all’azienda.</p>
-    </div>
-  </div>
-</div>
+    <section>
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
 
-<div class="project">
-  <h2>Contact Me</h2>
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message" rows="4" required></textarea>
-    <button type="submit">Send</button>
-  </form>
-</div>
-
-<footer>
-  <p>© 2025 Lida Ahmadi</p>
-  <div class="footer-icons">
-    <a href="mailto:lidaahmadi09@gmail.com"><i class="fas fa-envelope"></i></a>
-    <a href="https://wa.me/393516336922"><i class="fab fa-whatsapp"></i></a>
-  </div>
-  <p>Email: lidaahmadi09@gmail.com | WhatsApp: +39 351 633 6922</p>
-</footer>
-
-<script>
-  const headerText = document.querySelector('header h1');
-  let colors = ['#ffcccc', '#ffe0e0', '#ffffff'];
-  let i = 0;
-  setInterval(() => {
-    headerText.style.color = colors[i % colors.length];
-    i++;
-  }, 1500);
-</script>
-
+  <footer>
+    <p>© 2025 Lida Ahmadi</p>
+    <div class="footer-icons">
+      <a href="mailto:lidaahmadi09@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://wa.me/393516336922"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p>Email: lidaahmadi09@gmail.com | WhatsApp: +39 351 633 6922</p>
+  </footer>
 </body>
 </html>
