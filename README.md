@@ -58,7 +58,7 @@ I am improving my skills by building real projects and learning how to create pr
 ## 📫 Contact
 
 📍 Based in Italy  
-📧 your-email@example.com
+📧 lidaahmadi09@gmail.com
 
 ---
 
